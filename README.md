@@ -4,5 +4,4 @@ follows [golang project-layout](https://github.com/golang-standards/project-layo
 Some boilerplate can be used for future projects
 ## Requirements
 - Sample application which is build in [docker](https://www.docker.com/)
-- Uses gnu make to assemble
-
+- Uses gnu make to build & run & test
