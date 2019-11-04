@@ -26,3 +26,16 @@ build:
     --env OS=${OS} \
 	-w /src \
 	$(BUILD_IMAGE) /bin/sh "./scripts/build.sh"
+
+run:
+	@echo 'building project'
+	$(ENV)
+	docker run --rm  \
+	-u $$(id -u):$$(id -g) \
+	-v $$(pwd):/src \
+	-v $$(pwd)/.go/bin/$(OS)_$(ARCH):/go/bin                \
+    -v $$(pwd)/.go/cache:/.cache                       \
+    --env ARCH=${ARCH} \
+    --env OS=${OS} \
+	-w /src \
+	$(BUILD_IMAGE) /bin/sh "./scripts/run.sh"

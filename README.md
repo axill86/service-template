@@ -5,3 +5,7 @@ Some boilerplate can be used for future projects
 ## Requirements
 - Sample application which is build in [docker](https://www.docker.com/)
 - Uses gnu make to build & run & test
+
+## TODO:
+* Add run in docker
+* 
